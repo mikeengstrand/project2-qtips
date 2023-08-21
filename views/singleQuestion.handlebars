@@ -1,0 +1,24 @@
+<div class="row mb-4 question">
+  <div class="col-md-5">
+    <h2>
+      <a href="/question/{{question.id}}">`{{question.topic}}
+        <h3>Question:</h3> 
+        <p>{{question.content}}</p>
+        <ul>
+          {{#each question.answers as |answer|}}
+          <p>Possible answers:</p>
+          <li>{{answer.content}}</li>
+          {{/each}}
+        </ul>
+        <br>{{question.user.username}}
+        <br>Up Votes {{question.upVote}} DownVotes {{question.downVote}} `
+      </a>
+    </h2>
+    <p>Created by {{question.User.userName}}
+      {{!-- on {{format_date question.date_created}} --}}
+    </p>
+
+  </div>
+  <div class="col-md-7">
+  </div>
+</div>
